@@ -3,14 +3,14 @@
 function isInteger (characters) { 
   var filteredArray = characters.filter(char => Number(char))
   if (filteredArray.length === 0) {
-    throw "Input does not contain any integers";
+    throw "Error: Input does not contain any integers";
   } else {
     return filteredArray;
   }
 }
 
 function solution (input) {
-  if (typeof input !== "string") throw "Input is not a string"
+  if (typeof input !== "string") throw "Error: Input is not a string"
   const numbersArray = isInteger(input.split(''))
   if (numbersArray.length <= 1) return input;
   var results = [[numbersArray.shift()]]

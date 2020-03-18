@@ -24,10 +24,10 @@ describe('When input contains characters other than numerals,', function() {
     })
 
     it('if there are no integers, returns an error message', function() {
-        expect(function() { solution("ABC") }).toThrow("Input does not contain any integers");
+        expect(function() { solution("ABC") }).toThrow("Error: Input does not contain any integers");
     })
 
     it('if input is not a string, returns an error message', function() {
-        expect(function() { solution(["ABC"]) }).toThrow("Input is not a string");
+        expect(function() { solution(["ABC"]) }).toThrow("Error: Input is not a string");
     })
 })
