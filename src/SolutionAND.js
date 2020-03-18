@@ -2,14 +2,14 @@
 
 function solution (input) {
   if (typeof input !== "string") throw "Error: Input is not a string";
-  const numbersArray = isInteger(input.split(''))
+  const numbersArray = isPositiveInteger(input.split(''))
   if (numbersArray.length <= 1) return input;
   var ANDSiblings = permute(numbersArray)
   return display(ANDSiblings)
 }
 
-function isInteger (characters) { 
-  var filteredArray = characters.filter(char => Number(char))
+function isPositiveInteger (characters) { 
+  var filteredArray = characters.filter(char => Number(char) )
   if (filteredArray.length === 0) {
     throw "Error: Input does not contain any integers";
   } else {

@@ -1,10 +1,14 @@
 # AND Digital Solution
 
 ## Description
-This simple algorithm displays the permutations of a string input. It will throw an error message if the input's data structure is not a string, or if it does not contain any integers.
+This simple algorithm displays the AND-Siblings of a string input that contains integers. 
 
-## Run tests
-Run the tests with Jasmine from the root of your directory. 
+There are some provisions for edge cases. The application will throw an error message if the data structure of the input is not a string as well as if it does not contain any positive integers. The final result does not contain letters, spaces or negative numbers.
+
+The code was refactored as much as possible to respect the Single Responsibility Principle, while also retaining the feature of being called through ```solution(input)``` or ```console.log(solution(input))```. 
+
+## Run unit tests
+To run the tests with Jasmine, type the following command at the root of the directory:
 ```
 open specrunner.html
 ```
