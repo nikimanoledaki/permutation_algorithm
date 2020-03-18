@@ -1,15 +1,23 @@
-function solution (input) {
-  if (input.length <= 1) return input;
-  var digits = input.split('')
-  var results = [[digits.shift()]]
+'use strict';
 
-  while (digits.length) {
-    const currentDigit = digits.shift()
-    let temporaryResults = []
+function isInteger (characters) { 
+  var filteredArray = characters.filter(char => Number(char))
+  return filteredArray;
+}
+
+function solution (input) {
+  var numbersArray = isInteger(input.split(''))
+  if (input.length <= 1) return input;
+  var results = [[numbersArray.shift()]]
+
+  while (numbersArray.length) {
+    var currentDigit = numbersArray.shift()
+    var temporaryResults = []
+
     results.forEach( result => {
       let index = 0
       while (index <= result.length) {
-        const temporary = [...result]
+        var temporary = [...result]
         temporary.splice(index, 0, currentDigit)
         temporaryResults.push(temporary)
         index++
@@ -17,9 +25,10 @@ function solution (input) {
     })
     results = temporaryResults
   }
+
   return results
-    .map(letterArray => letterArray.join(''))
-    .filter((el, idx, self) => (self.indexOf(el) === idx))
+    .map(numbersArray => numbersArray.join(''))
+    .filter((element, index, self) => (self.indexOf(element) === index))
     .sort()
     .reverse()
     .toString()
