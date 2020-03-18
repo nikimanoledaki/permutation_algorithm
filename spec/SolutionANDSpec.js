@@ -16,7 +16,7 @@ describe('When input length', function() {
 
 describe('When input contains characters other than positive integers,', function() {
     it('filters string for integers', function() {
-        expect(solution("3A2 C-6")).toEqual("632,623,362,326,263,236")
+        expect(solution("3A.2 C-6")).toEqual("632,623,362,326,263,236")
     })
 
     it('if there are no integers, returns an error message', function() {

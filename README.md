@@ -1,11 +1,11 @@
 # AND Digital Solution
 
 ## Description
-This simple algorithm displays the AND-Siblings of a string input that contains integers. 
+This simple algorithm is fully tested and displays the AND-Siblings of a string input that contains positive integers. 
 
-There are some provisions for edge cases. The application will throw an error message if the data structure of the input is not a string as well as if it does not contain any positive integers. The final result does not contain letters, spaces or negative numbers.
+There code contains provisions for some edge cases. For example, the application will throw an error message if the data structure of the input is not a string as well as if it does not contain any integers. Also, the output will not contain letters, spaces, or any other special characters.
 
-The code was refactored as much as possible to respect the Single Responsibility Principle, while also retaining the feature of being called through ```solution(input)``` or ```console.log(solution(input))```. 
+The code was refactored as much as possible to respect the Single Responsibility Principle, while also retaining the feature of being called through ```solution(input)``` or ```console.log(solution(input))```, which was required from the client. 
 
 ## Run unit tests
 To run the tests with Jasmine, type the following command at the root of the directory:
