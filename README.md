@@ -1,4 +1,4 @@
-# Solution
+# AND Digital Solution
 
 ## Description
 This simple algorithm displays the permutations of a string input. It will throw an error message if the input's data structure is not a string, or if it does not contain any integers.

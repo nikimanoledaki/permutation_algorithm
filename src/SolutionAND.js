@@ -1,5 +1,13 @@
 'use strict';
 
+function solution (input) {
+  if (typeof input !== "string") throw "Error: Input is not a string";
+  const numbersArray = isInteger(input.split(''))
+  if (numbersArray.length <= 1) return input;
+  var ANDSiblings = permute(numbersArray)
+  return display(ANDSiblings)
+}
+
 function isInteger (characters) { 
   var filteredArray = characters.filter(char => Number(char))
   if (filteredArray.length === 0) {
@@ -9,12 +17,8 @@ function isInteger (characters) {
   }
 }
 
-function solution (input) {
-  if (typeof input !== "string") throw "Error: Input is not a string"
-  const numbersArray = isInteger(input.split(''))
-  if (numbersArray.length <= 1) return input;
+function permute (numbersArray) {
   var results = [[numbersArray.shift()]]
-
   while (numbersArray.length) {
     var currentDigit = numbersArray.shift()
     var temporaryResults = []
@@ -30,7 +34,7 @@ function solution (input) {
     })
     results = temporaryResults
   }
-  return display(results)
+  return results;
 }
 
 function display (results) {
@@ -41,4 +45,3 @@ function display (results) {
     .reverse()
     .toString()
 }
-
