@@ -2,12 +2,17 @@
 
 function isInteger (characters) { 
   var filteredArray = characters.filter(char => Number(char))
-  return filteredArray;
+  if (filteredArray.length === 0) {
+    throw "Input does not contain any integers";
+  } else {
+    return filteredArray;
+  }
 }
 
 function solution (input) {
-  var numbersArray = isInteger(input.split(''))
-  if (input.length <= 1) return input;
+  if (typeof input !== "string") throw "Input is not a string"
+  const numbersArray = isInteger(input.split(''))
+  if (numbersArray.length <= 1) return input;
   var results = [[numbersArray.shift()]]
 
   while (numbersArray.length) {
@@ -25,7 +30,10 @@ function solution (input) {
     })
     results = temporaryResults
   }
+  return display(results)
+}
 
+function display (results) {
   return results
     .map(numbersArray => numbersArray.join(''))
     .filter((element, index, self) => (self.indexOf(element) === index))
@@ -33,3 +41,4 @@ function solution (input) {
     .reverse()
     .toString()
 }
+
