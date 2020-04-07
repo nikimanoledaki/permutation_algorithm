@@ -17,4 +17,5 @@ You do not need to install anything. A new tab should open automatically.
 
 ## Acceptance Criteria
 console.log(solution('326')); // expected ouput 632,623,362,326,263,236
+</br>
 console.log(solution('A 3B2 C6D')); // expected ouput 632,623,362,326,263,236
